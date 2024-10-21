@@ -14,7 +14,7 @@ export const TestimonialSection2 = ({
 }: {
   items: {
     id?: number;
-    image?: string;
+    image: string;
     name?: string;
     company?: string;
     designation?: string;
@@ -32,7 +32,7 @@ export const TestimonialSection2 = ({
 
   useEffect(() => {
     addAnimation();
-  }, [addAnimation]);
+  }, []);
   const [start, setStart] = useState(false);
   function addAnimation() {
     if (containerRef.current && scrollerRef.current) {
