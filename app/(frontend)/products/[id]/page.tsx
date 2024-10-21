@@ -5,18 +5,17 @@ import Image from "next/image";
 import CallToAction from "../../_components/CallToAction";
 import ClientsSlider from "../../_components/Clients";
 
-// Fetch the product data by ID
-export async function getPostById(id: string) {
-  const product = ProductsData.find((post) => post.id === id); // Search post by ID
+const getProductById = async (id: string) => {
+  const product = ProductsData.find((product) => product.id === id); // Search post by ID
   if (!product) {
-    throw new Error("Product not found");
+    throw new Error("Post not found");
   }
   return product;
-}
+};
 
 // Dynamic metadata generation based on the product
 export async function generateMetadata({ params }: { params: { id: string } }) {
-  const product = await getPostById(params.id);
+  const product = await getProductById(params.id);
   return {
     title: product.title, // Dynamically setting the title
     description: product.desc, // Dynamically setting the description
@@ -25,7 +24,7 @@ export async function generateMetadata({ params }: { params: { id: string } }) {
 
 const ProductDetails = async ({ params }: { params: { id: string } }) => {
   // Fetch the product using the ID from params
-  const product = await getPostById(params.id);
+  const product = await getProductById(params.id);
   return (
     <div className="flex min-h-screen  flex-col justify-between overflow-hidden z-[40] md:mx-36 md:my-10 ">
       <Banner page_title={product.title} src="/images/banner.jpg" />
