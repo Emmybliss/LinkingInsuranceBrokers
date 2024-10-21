@@ -1,33 +1,19 @@
 import Image from "next/image";
 import React from "react";
 import Banner from "../../_components/Banner";
+import { postData } from "@/lib/constants"; // Assuming this fetches data
 import CallToAction from "../../_components/CallToAction";
 import CallToAction2 from "../../_components/CallToAction2";
 import ClientsSlider from "../../_components/Clients";
-import { getPostById } from "@/lib/utils";
 
 // Fetch the post data by ID
-// export async function getPostById(id: string) {
-//   // const post = postData(id); // Assuming this fetches the post by ID
-//   const post = postData.find((post) => post.id === id); // Search post by ID
-//   if (!post) {
-//     throw new Error("Post not found");
-//   }
-//   return post;
-// }
-export async function getServerSideProps({
-  params,
-}: {
-  params: { id: string };
-}) {
-  const post = await getPostById(params.id);
-
-  return {
-    props: {
-      post, // Pass the post data as props
-    },
-  };
-}
+const getPostById = async (id: string) => {
+  const post = postData.find((post) => post.id === id); // Search post by ID
+  if (!post) {
+    throw new Error("Post not found");
+  }
+  return post;
+};
 
 // Dynamic metadata generation based on the post
 export async function generateMetadata({ params }: { params: { id: string } }) {
