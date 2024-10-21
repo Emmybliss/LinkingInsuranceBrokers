@@ -5,7 +5,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import Header from "./(frontend)/_components/Header";
 import Footer from "./(frontend)/_components/Footer";
 import StarsCanvas from "./_components/StarBackground";
-import { ModalProvider } from "@/components/ui/animated-modal";
+
 import ProgressBarProviders from "./_components/ProgressBarProvider";
 
 // Use Poppins from Google Fonts
@@ -40,7 +40,7 @@ export default function RootLayout({
             <StarsCanvas />
 
             <Header />
-            <ModalProvider>{children}</ModalProvider>
+            {children}
             <Footer />
           </ThemeProvider>
         </ProgressBarProviders>
