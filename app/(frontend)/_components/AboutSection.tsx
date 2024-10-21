@@ -11,7 +11,7 @@ interface AboutSectionProps {
 
 const AboutSection: React.FC<AboutSectionProps> = ({ button }) => {
   return (
-    <div className="w-full md:mx-0 mx-0 z-[40]">
+    <div className="w-full md:mx-36 mx-0 z-[40]">
       <div className="px-3 md:grid md:grid-cols-2 z-[40] grid grid-cols-1 md:gap-4 md:mt-10 mt-5">
         <div className="flex flex-col items-center justify-center mb-4">
           <h2 className="text-2xl md:text-3xl font-thin">About Us</h2>
