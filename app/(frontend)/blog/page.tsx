@@ -1,9 +1,8 @@
 import React from "react";
 import Banner from "../_components/Banner";
 import BlogPosts from "../_components/BlogPosts";
-import { postData, testimonials } from "@/lib/constants";
+import { postData } from "@/lib/constants";
 import CallToAction from "../_components/CallToAction";
-import { TestimonialSection2 } from "@/components/ui/infinite-moving-cards";
 import CallToAction2 from "../_components/CallToAction2";
 import ClientsSlider from "../_components/Clients";
 

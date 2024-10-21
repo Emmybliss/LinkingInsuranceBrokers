@@ -1,6 +1,3 @@
-import { Button } from "@/components/ui/button";
-import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
-import Link from "next/link";
 import React from "react";
 
 interface CallToActionProps {

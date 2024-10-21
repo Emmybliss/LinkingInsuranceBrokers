@@ -3,12 +3,11 @@ import Banner from "../_components/Banner";
 import AboutSection from "../_components/AboutSection";
 import { BicepsFlexed, Check, Eye, Scale, Target, Trophy } from "lucide-react";
 import CallToAction2 from "../_components/CallToAction2";
-import TestimonialSection from "../_components/TestimonialSection";
-import { TestimonialSection2 } from "@/components/ui/infinite-moving-cards";
 import { testimonials } from "@/lib/constants";
 import ManagementTeam from "../_components/ManagementTeam";
 import CallToAction from "../_components/CallToAction";
 import ClientsSlider from "../_components/Clients";
+import { TestimonialSection2 } from "@/components/ui/infinite-moving-cards";
 
 const AboutPage = () => {
   return (

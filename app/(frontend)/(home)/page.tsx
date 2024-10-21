@@ -1,6 +1,5 @@
 import { CarouselComponent } from "../_components/CarouselComponent";
 import AboutSection from "../_components/AboutSection";
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import AchievementSection from "../_components/Counter";
 import CallToAction2 from "../_components/CallToAction2";
@@ -12,11 +11,7 @@ import { testimonials } from "@/lib/constants";
 import { FeaturedServices } from "@/app/(frontend)/_components/FeaturedServices";
 import FeaturedProducts from "../_components/FeaturedProducts";
 
-interface HomeProps {
-  button_text?: string;
-  button?: React.ReactNode;
-}
-const Home: React.FC<HomeProps> = ({ button, button_text }) => {
+const Home: React.FC = () => {
   return (
     <div className="flex min-h-screen flex-col justify-between overflow-hidden z-[40]">
       <CarouselComponent />
