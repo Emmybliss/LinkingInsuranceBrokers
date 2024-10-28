@@ -14,9 +14,9 @@ import { ProductDataType } from "@/lib/constants";
 const ProductList = ({ products }: { products: ProductDataType[] }) => {
   return (
     <div className="md:mt-10 mt-5 md:mb-10 mb-5 z-[40]">
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-4 lg:grid-cols-3">
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-3 md:grid">
         {products.map((item) => (
-          <Link href={`/products/${item.id}`} key={item.id}>
+          <Link href={`/products/${item.slug}`} key={item.id}>
             <Card className="transition-transform mx-4 md:mx-0 duration-300 ease-in-out hover:scale-105 dark:bg-[rgba(40,40,40,0.70)] bg-gray-100 hover:bg-gradient-to-tr from-blue-500 to-orange-500 hover:bg-opacity-50 shadow-[2px_4px_16px_0px_rgba(248,248,248,0.06)_inset] group">
               <CardHeader>
                 <CardTitle></CardTitle>

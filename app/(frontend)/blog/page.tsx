@@ -8,7 +8,9 @@ import ClientsSlider from "../_components/Clients";
 
 // Define the metadata for the page
 export const metadata = {
-  title: "Blog Posts",
+  title: "Blog Posts | Linking Insurance Brokers",
+  description:
+    "Stay informed with the latest insights and updates on insurance solutions, risk management, and industry trends from Linking Insurance Brokers.",
 };
 
 // Define the BlogPage component

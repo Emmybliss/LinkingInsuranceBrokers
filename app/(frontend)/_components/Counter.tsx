@@ -10,38 +10,38 @@ const AnimatedNumbers = dynamic(() => import("react-animated-numbers"), {
 // Define the type for each achievement object
 type Achievement = {
   metric: string;
-  value: string; // Keeping it as string since it's parsed later
-  postfix?: string; // Optional as not all achievements have a postfix
+  value: number; // Changed to number to avoid repeated parsing
+  postfix?: string;
 };
 
 // Define the list of achievements with proper types
 const achivementList: Achievement[] = [
   {
     metric: "Products/Services",
-    value: "250",
+    value: 250,
     postfix: "+",
   },
   {
     metric: "Happy Clients",
-    value: "500",
+    value: 500,
     postfix: "+",
   },
   {
     metric: "Awards",
-    value: "8",
+    value: 8,
   },
   {
     metric: "Claim Settlement Rate",
-    value: "100",
+    value: 100,
     postfix: "%",
   },
 ];
 
 const AchievementSection: React.FC = () => {
   return (
-    <div className="py-8 mx-0  flex flex-col md:flex md:mx-36">
+    <div className="md:mt-10 mt-5">
       <BackgroundGradient>
-        <div className="border-none rounded-md gap-10 py-10 md:py-8  flex flex-col md:flex md:flex-row items-center justify-between">
+        <div className="border-none rounded-md gap-5 py-5 md:py-8 flex flex-col md:flex-row md:flex items-center justify-between">
           {achivementList.map((achievement, index) => (
             <div
               key={index}
@@ -50,12 +50,11 @@ const AchievementSection: React.FC = () => {
               <h2 className="text-4xl font-bold flex flex-row">
                 <AnimatedNumbers
                   includeComma
-                  animateToNumber={parseInt(achievement.value)} // Parsing value as an integer
+                  animateToNumber={achievement.value} // Direct use of number type
                   locale="en-US"
                   className="text-4xl font-bold"
                 />
-                {achievement.postfix && achievement.postfix}{" "}
-                {/* Render postfix if it exists */}
+                {achievement.postfix && <span>{achievement.postfix}</span>}
               </h2>
               <p className="text-base">{achievement.metric}</p>
             </div>

@@ -3,9 +3,15 @@ import React from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
-export function LampComponent({ lamp_heading }: { lamp_heading: string }) {
+export function LampComponent({
+  lamp_heading,
+  className,
+}: {
+  lamp_heading: string;
+  className?: string; // Add className as an optional prop
+}) {
   return (
-    <LampContainer>
+    <LampContainer className={className}>
       <motion.h1
         initial={{ opacity: 0.5, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -14,7 +20,7 @@ export function LampComponent({ lamp_heading }: { lamp_heading: string }) {
           duration: 0.8,
           ease: "easeInOut",
         }}
-        className="md:-mt-40 -mt-28 bg-gradient-to-br from-slate-300 to-slate-500 py-4 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl"
+        className="md:mt-20  bg-gradient-to-br from-slate-300 to-slate-500 py-2 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl"
       >
         {lamp_heading}
       </motion.h1>
@@ -32,7 +38,7 @@ export const LampContainer = ({
   return (
     <div
       className={cn(
-        "relative md:-mt-72  -mt-72 -mb-80 flex min-h-screen flex-col items-center justify-center overflow-hidden bg-slate-950 w-full rounded-md z-0",
+        "relative md:mt-10 hidden  md:flex md:min-h-screen   md:flex-col items-center justify-center overflow-hidden bg-slate-950 w-full rounded-md z-0",
         className
       )}
     >
@@ -48,7 +54,7 @@ export const LampContainer = ({
           style={{
             backgroundImage: `conic-gradient(var(--conic-position), var(--tw-gradient-stops))`,
           }}
-          className="absolute inset-auto right-1/2 h-56 overflow-visible w-[30rem] bg-gradient-conic from-cyan-500 via-transparent to-transparent text-white [--conic-position:from_70deg_at_center_top]"
+          className="absolute md:mt-0 inset-auto right-1/2 h-56 overflow-visible w-[30rem] bg-gradient-conic from-cyan-500 via-transparent to-transparent text-white [--conic-position:from_70deg_at_center_top]"
         >
           <div className="absolute  w-[100%] left-0 bg-slate-950 h-40 bottom-0 z-20 [mask-image:linear-gradient(to_top,white,transparent)]" />
           <div className="absolute  w-40 h-[100%] left-0 bg-slate-950  bottom-0 z-20 [mask-image:linear-gradient(to_right,white,transparent)]" />

@@ -1,11 +1,22 @@
 import React from "react";
 import Banner from "../_components/Banner";
-
 import { Clock, Linkedin, Mail, MapPin, PhoneCall } from "lucide-react";
 import Link from "next/link";
-
 import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 import ContactForm from "../_components/ContactForm";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+
+export const metadata = {
+  title: "Contact Us | Linking Insurance Brokers",
+  description:
+    "Get in touch with Linking Insurance Brokers for expert guidance, policy support, and answers to all your insurance-related questions.",
+};
 
 const ContactPage: React.FC = () => {
   return (
@@ -13,10 +24,21 @@ const ContactPage: React.FC = () => {
       <Banner page_title="CONTACT US" src="/images/contact1.jpg" />
       <div className="gap-5 md:grid md:grid-cols-2 grid grid-cols-1 mt-5 px-3">
         <div className="flex flex-col">
-          <h2 className="mb-4 text-2xl font-semibold">Send us a Message</h2>
-          <div className="w-full z-[40]">
-            <ContactForm />
-          </div>
+          {/* <h2 className="mb-4 text-2xl font-semibold">Send us a Message</h2>
+          <div className="w-full z-[40]"> */}
+          <Card className="z-[40] shadow-md">
+            <CardHeader>
+              <CardTitle>Send Us A Message</CardTitle>
+              <CardDescription>
+                Fill the form below and we will get back to you as soon as
+                possible
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <ContactForm />
+            </CardContent>
+          </Card>
+          {/* </div> */}
         </div>
         <div className="flex flex-col space-y-3 z-[40] mb-5">
           <h2 className="mb-3 text-2xl font-semibold">Contact Details</h2>

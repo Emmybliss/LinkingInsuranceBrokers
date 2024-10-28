@@ -111,6 +111,7 @@ export const partners: Partners[] = [
 interface PostTypes {
   id: string;
   title: string;
+  slug: string;
   image: string;
   intro: string;
   body: string;
@@ -122,6 +123,7 @@ export const postData: PostTypes[] = [
   {
     id: "1",
     title: "The Importance of Comprehensive Car Insurance",
+    slug: "the-importance-of-comprehensive-car-insurance",
     image: "/images/car-insurance.jpg",
     intro:
       "Discover why comprehensive car insurance is essential in today’s fast-paced world and how it can save you from unexpected expenses.",
@@ -131,6 +133,7 @@ export const postData: PostTypes[] = [
   {
     id: "2",
     title: "Health Insurance: Why You Shouldn’t Delay",
+    slug: "health-insurance-why-you-shouldnt-delay",
     image: "/images/health-insurance.jpg",
     intro:
       "Learn about the benefits of health insurance, what it covers, and why it’s crucial to secure your family’s health.",
@@ -140,26 +143,27 @@ export const postData: PostTypes[] = [
   {
     id: "3",
     title: "Homeowners Insurance: Protecting Your Biggest Investment",
+    slug: "homeowners-insurance-protecting-your-biggest-investment",
     image: "/images/home-insurance.jpg",
     intro:
       "Understand the importance of homeowners insurance and how it safeguards your property against unforeseen disasters.",
     body: "Homeownership is one of the largest investments an individual can make, and protecting that investment is crucial. Homeowners insurance provides coverage against damage caused by fire, theft, vandalism, and natural disasters. In many cases, it also includes liability coverage in case someone is injured on your property. Without this insurance, repairing or rebuilding after a disaster can be financially devastating. Whether you're protecting your physical property or covering potential liability issues, homeowners insurance is a safety net no property owner should go without",
-
     link: "#",
   },
   {
     id: "4",
     title: "Life Insurance: Securing Your Family’s Future",
+    slug: "life-insurance-securing-your-familys-future",
     image: "/images/life-insurance.jpg",
     intro:
       "Learn how life insurance can provide financial stability to your loved ones when they need it the most.",
     body: "Life insurance is a vital financial tool designed to provide for your family in the event of your untimely death. The right life insurance policy ensures that your loved ones are not left with debts or financial difficulties, and that they can maintain their standard of living after your passing. The payout from a life insurance policy can cover funeral costs, mortgages, and even future expenses like college tuition. For those who wish to secure the future of their family, having a life insurance policy is a responsible and caring decision",
-
     link: "#",
   },
   {
     id: "5",
     title: "Business Insurance: A Must for Every Entrepreneur",
+    slug: "business-insurance-a-must-for-every-entrepreneur",
     image: "/images/business-insurance.jpg",
     intro:
       "Explore the different types of business insurance and how they protect your enterprise from potential liabilities.",
@@ -169,6 +173,7 @@ export const postData: PostTypes[] = [
   {
     id: "6",
     title: "Understanding Travel Insurance and Its Benefits",
+    slug: "understanding-travel-insurance-and-its-benefits",
     image: "/images/travel-insurance.jpg",
     intro:
       "Traveling soon? Discover why travel insurance is an essential part of your trip preparation and what it covers.",
@@ -178,6 +183,7 @@ export const postData: PostTypes[] = [
   {
     id: "7",
     title: "Insurance Fraud: How to Avoid Common Scams",
+    slug: "insurance-fraud-how-to-avoid-common-scams",
     image: "/images/fraud-prevention.jpg",
     intro:
       "Protect yourself from insurance fraud with these tips to recognize and avoid common scams.",
@@ -187,6 +193,7 @@ export const postData: PostTypes[] = [
   {
     id: "8",
     title: "Why Professional Liability Insurance is Important",
+    slug: "why-professional-liability-insurance-is-important",
     image: "/images/liability-insurance.jpg",
     intro:
       "Learn about professional liability insurance and how it shields professionals from claims related to their services.",
@@ -196,6 +203,7 @@ export const postData: PostTypes[] = [
   {
     id: "9",
     title: "Pet Insurance: Is It Worth the Cost?",
+    slug: "pet-insurance-is-it-worth-the-cost",
     image: "/images/pet-insurance.jpg",
     intro:
       "Find out if pet insurance is a smart investment for your furry friend’s healthcare needs.",
@@ -205,6 +213,7 @@ export const postData: PostTypes[] = [
   {
     id: "10",
     title: "The Role of Insurance Brokers in Customizing Policies",
+    slug: "the-role-of-insurance-brokers-in-customizing-policies",
     image: "/images/insurance-brokers.jpg",
     intro:
       "Discover how insurance brokers can help you find the most suitable policies tailored to your individual or business needs.",
@@ -216,53 +225,92 @@ export const postData: PostTypes[] = [
 // Define type for slider items
 export interface ProductDataType {
   id: string;
+  slug: string;
   image: string;
   title: string;
   desc: string;
 }
-export const ProductsData: ProductDataType[] = [
+
+export const productsData: ProductDataType[] = [
   {
     id: "1",
     image: "/images/contractors.jpg",
     title: "CONTRACTORS ALL RISK INSURANCE",
     desc: "Ensure your construction projects are covered from start to finish with our Contractors All Risk Insurance. We provide tailored solutions to safeguard against unforeseen losses and damages.",
+    slug: "contractors-all-risk-insurance",
   },
   {
     id: "2",
     image: "/images/firerisk.jpg",
     title: "FIRE AND SPECIAL PERILS / PUBLIC BUILDING & STRUCTURES",
     desc: "Protect your properties from fire and other specified perils with our comprehensive coverage. Secure your public buildings and structures against potential risks and damages.",
+    slug: "fire-and-special-perils-public-building-structures",
   },
   {
     id: "3",
     image: "/images/aviation.jpg",
     title: "AVIATION INSURANCE COVER",
     desc: "Get the best aviation insurance that offers extensive coverage for aircraft, personnel, and liabilities. Our expert brokers provide top-notch protection tailored to your aviation needs.",
+    slug: "aviation-insurance-cover",
   },
   {
     id: "4",
     image: "/images/marine.jpg",
     title: "MARINE INSURANCE",
     desc: "From cargo to ships, our Marine Insurance offers complete protection for goods in transit by sea. Keep your marine assets safe with tailored solutions that meet international standards.",
+    slug: "marine-insurance",
   },
   {
     id: "5",
     image: "/images/goods-in-transit-banner-2-600x475-1.jpg",
     title: "GOODS IN TRANSIT INSURANCE",
     desc: "Safeguard your goods during transport with our comprehensive Goods in Transit Insurance. Whether by land, sea, or air, we ensure your assets are fully protected until they reach their destination.",
+    slug: "goods-in-transit-insurance",
+  },
+  {
+    id: "6",
+    image: "/images/car-insurance.jpg",
+    title: "CAR INSURANCE",
+    desc: "Our Car Insurance provides full coverage for your vehicle, ensuring protection against accidents, theft, and damages. Enjoy peace of mind while driving, with customizable plans to suit your needs.",
+    slug: "car-insurance",
+  },
+  {
+    id: "7",
+    image: "/images/bonds-insurance.jpg",
+    title: "BONDS/GUARANTEE INSURANCE",
+    desc: "Secure your contractual obligations with Bonds/Guarantee Insurance. We offer reliable solutions that cover financial risks, ensuring both parties in a contract are safeguarded.",
+    slug: "bonds-guarantee-insurance",
+  },
+  {
+    id: "8",
+    image: "/images/computer-risk.jpg",
+    title: "COMPUTER ALL RISK INSURANCE",
+    desc: "Protect your business-critical computer systems with Computer All Risk Insurance. We offer extensive coverage for damage, theft, and other risks that could impact your tech infrastructure.",
+    slug: "computer-all-risk-insurance",
+  },
+  {
+    id: "9",
+    image: "/images/group.jpg",
+    title: "GROUP LIFE ASSURANCE",
+    desc: "Provide financial security for your employees and their families with Group Life Assurance. Our policy ensures a lump-sum payout to beneficiaries in the unfortunate event of loss of life.",
+    slug: "group-life-assurance",
   },
 ];
 
-interface serivicesDataTypes {
+export interface ServicesDataType {
   id: string;
+  slug: string;
   title: string;
+  image: string;
   description: string;
   link: string;
 }
-export const servicesData: serivicesDataTypes[] = [
+export const servicesData: ServicesDataType[] = [
   {
     id: "1",
-    title: "Risk Assessment:",
+    title: "Risk Assessment",
+    slug: "risk-assessment", // Added slug
+    image: "/images/risk-asssessment.jpg",
     description:
       "We assess the risks associated with clients' personal or business situations. This helps determine the appropriate type and level of coverage required to protect against potential losses",
     link: "#",
@@ -270,6 +318,8 @@ export const servicesData: serivicesDataTypes[] = [
   {
     id: "2",
     title: "Policy Comparison",
+    slug: "policy-comparison", // Added slug
+    image: "/images/policy-comparison.jpg",
     description:
       "We compare insurance policies from various providers, ensuring that clients get the best value in terms of coverage and premium costs. This eliminates the hassle of researching and evaluating different options individually",
     link: "#",
@@ -277,6 +327,8 @@ export const servicesData: serivicesDataTypes[] = [
   {
     id: "3",
     title: "Claims Assistance",
+    slug: "claims-assistance", // Added slug
+    image: "/images/claim-assistance.jpg",
     description:
       "Linking Insurance Brokers guide clients through the insurance claims process, helping them collect the necessary documentation and negotiate with insurers to ensure timely and fair payouts.",
     link: "#",
@@ -284,6 +336,8 @@ export const servicesData: serivicesDataTypes[] = [
   {
     id: "4",
     title: "Policy Management",
+    slug: "policy-management", // Added slug
+    image: "/images/policy-management.jpg",
     description:
       "They manage clients' insurance portfolios by regularly reviewing and updating policies to ensure they stay aligned with any changes in coverage needs, lifestyle, or business operations.",
     link: "#",
@@ -291,6 +345,8 @@ export const servicesData: serivicesDataTypes[] = [
   {
     id: "5",
     title: "Customized Insurance Solutions",
+    slug: "customized-insurance-solutions", // Added slug
+    image: "/images/insurance-solution.jpg",
     description:
       "Based on specific needs, Linking Insurance Brokers tailor insurance plans to suit individual or business requirements, whether for life, health, auto, property, or business insurance.",
     link: "#",
@@ -298,6 +354,8 @@ export const servicesData: serivicesDataTypes[] = [
   {
     id: "6",
     title: "Legal and Regulatory Guidance",
+    slug: "legal-and-regulatory-guidance", // Added slug
+    image: "/images/regulatory-guidance.jpg",
     description:
       "They offer advice on insurance regulations and ensure that clients comply with any legal obligations related to their insurance coverage, such as industry-specific requirements or local regulations.",
     link: "#",
@@ -305,6 +363,8 @@ export const servicesData: serivicesDataTypes[] = [
   {
     id: "7",
     title: "Renewal Management",
+    slug: "renewal-management", // Added slug
+    image: "/images/regulatory-guidance.jpg",
     description:
       "We handle policy renewals, ensuring that coverage remains continuous and that the best terms are negotiated. This avoids lapses in coverage and keeps premiums competitive.",
     link: "#",
@@ -312,6 +372,8 @@ export const servicesData: serivicesDataTypes[] = [
   {
     id: "8",
     title: "Market Expertise",
+    slug: "market-expertise", // Added slug
+    image: "/images/market-expertise.jpg",
     description:
       "With Our industry knowledge, Linking Insurance Brokers provide insights into current trends and the latest insurance products, helping clients make informed decisions about their coverage.",
     link: "#",
@@ -319,6 +381,8 @@ export const servicesData: serivicesDataTypes[] = [
   {
     id: "9",
     title: "Risk Mitigation Strategies",
+    slug: "risk-mitigation-strategies", // Added slug
+    image: "/images/risk-mitigation.jpg",
     description:
       "We offer proactive advice on reducing exposure to risks, such as implementing safety measures or improving business practices, which can help lower premiums and prevent future claims.",
     link: "#",
@@ -326,8 +390,54 @@ export const servicesData: serivicesDataTypes[] = [
   {
     id: "10",
     title: "Client Advocacy",
+    slug: "client-advocacy", // Added slug
+    image: "/images/client-advocacy.jpg",
     description:
       "Acting as a client advocate, We work on behalf of their clients, ensuring their needs are prioritized in negotiations with insurers, and providing support whenever issues arise.",
     link: "#",
+  },
+];
+
+export interface PeriodDataType {
+  id: string;
+  time: string;
+}
+
+export const periodData: PeriodDataType[] = [
+  {
+    id: "1",
+    time: "1 Months",
+  },
+  {
+    id: "2",
+    time: "2 Months",
+  },
+  {
+    id: "3",
+    time: "3 Months",
+  },
+  {
+    id: "4",
+    time: "6 Months",
+  },
+  {
+    id: "5",
+    time: "12 Months",
+  },
+  {
+    id: "6",
+    time: "18 Months",
+  },
+  {
+    id: "7",
+    time: "24 Months",
+  },
+  {
+    id: "8",
+    time: "48 Months",
+  },
+  {
+    id: "9",
+    time: "72 Months",
   },
 ];

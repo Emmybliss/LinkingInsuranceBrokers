@@ -14,9 +14,17 @@ import {
 import { Links } from "./NavLinks";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
+import { useState } from "react";
+import { ModeToggle } from "@/app/_components/ModeToggle";
 
 const MobileMenu: React.FC = () => {
   const path = usePathname();
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleLinkClick = () => {
+    setIsOpen(false); // Close the sheet when a link is clicked
+  };
+
   return (
     <div className="block md:hidden z-[50] justify-center items-center">
       <div className="flex justify-between p-4">
@@ -30,29 +38,39 @@ const MobileMenu: React.FC = () => {
           />
         </Link>
 
-        <Sheet>
+        <Sheet open={isOpen} onOpenChange={setIsOpen}>
           <SheetTrigger asChild className="z-10">
-            <Button size="icon" variant="outline">
+            <Button
+              size="icon"
+              variant="outline"
+              onClick={() => setIsOpen(true)}
+            >
               <AlignJustify />
             </Button>
           </SheetTrigger>
           <SheetContent className="w-[400px] sm:w-[540px]">
             <SheetHeader>
-              <SheetTitle>Menu</SheetTitle>
+              <SheetTitle className="flex flex-col items-start justify-start">
+                <span>
+                  <ModeToggle />
+                </span>
+              </SheetTitle>
 
-              <SheetDescription className="mt-10 flex flex-col space-y-4 px-2 font-medium">
+              <SheetDescription className="mt-10 flex items-center justify-center flex-col space-y-4 px-2 font-medium">
                 {Links.map((link) => (
                   <Link
                     href={link.href}
                     key={link.id}
+                    onClick={handleLinkClick} // Close the sheet when a link is clicked
                     className={cn(
-                      "group flex flex-col items-center justify-center rounded-md px-2 py-2",
+                      "group flex items-center justify-center rounded-md px-2 py-2 w-auto", // Remove flex column and full width styles
                       path === link.href
-                        ? "bg-primary text-white"
-                        : "hover:bg-primary hover:text-white hover:opacity-50"
+                        ? "text-primary px-3 py-1" // Add padding only around the text when active
+                        : "hover:bg-muted hover:opacity-50"
                     )}
                   >
-                    {link.title}
+                    <span className="inline-block">{link.title}</span>{" "}
+                    {/* Ensure span handles text width */}
                   </Link>
                 ))}
               </SheetDescription>

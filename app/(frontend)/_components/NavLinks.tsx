@@ -32,6 +32,11 @@ export const Links = [
   },
   {
     id: 6,
+    title: "Career",
+    href: "/career",
+  },
+  {
+    id: 7,
     title: "Blog",
     href: "/blog",
   },

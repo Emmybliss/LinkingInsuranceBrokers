@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { PhoneCall } from "lucide-react";
 import Image from "next/image";
 import React from "react";
-import { DrawerDialogDemo } from "./C2AModal";
+import { ContactFormModal } from "./ContactFormModal";
 import Link from "next/link";
 
 const CallToAction2: React.FC = () => {
@@ -34,7 +34,7 @@ const CallToAction2: React.FC = () => {
             </Link>
 
             {/* Include DrawerDialogDemo here for dynamic rendering */}
-            <DrawerDialogDemo />
+            <ContactFormModal />
           </div>
         </div>
       </div>

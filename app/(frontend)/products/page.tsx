@@ -1,19 +1,23 @@
 import React from "react";
 import Banner from "../_components/Banner";
 import ProductList from "../_components/ProductList";
-import { ProductsData } from "@/lib/constants";
+import { productsData } from "@/lib/constants";
 
 // Define the metadata for the page
 export const metadata = {
-  title: "Products",
+  title: "Our Products | Linking Insurance Brokers",
+  description:
+    "Discover our tailored insurance products covering construction, fire, aviation, marine, and more for your protection needs.",
 };
 
 const ProductPage = () => {
-  const data = ProductsData;
+  const data = productsData;
   return (
-    <div className="flex min-h-screen  flex-col justify-between overflow-hidden z-[40] md:mx-36 md:my-10">
-      <Banner page_title="PRODUCTS/SERVICES" src="/images/banner.jpg" />
-      <ProductList products={data} />
+    <div className="flex min-h-screen  flex-col justify-between overflow-hidden z-[40] md:mx-0 md:my-10">
+      <Banner page_title="OUR PRODUCTS" src="/images/banner.jpg" />
+      <div className="mx-36">
+        <ProductList products={data} />
+      </div>
     </div>
   );
 };

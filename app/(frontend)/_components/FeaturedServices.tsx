@@ -1,18 +1,11 @@
 "use client";
-import { Button } from "@/components/ui/button";
+
 import { HoverEffect } from "@/components/ui/card-hover-effect";
-import { ChevronRight } from "lucide-react";
-import Link from "next/link";
 
 export function FeaturedServices() {
   return (
-    <div className="md:mx-36 mx-0 px-5 z-[40] md:-mt-80">
+    <div className="z-[40] md:-mt-80 md:mb-10">
       <HoverEffect items={services} />
-      <Link href="/products" className="mb-5 flex items-center justify-center">
-        <Button variant="outline">
-          View More Services <ChevronRight />
-        </Button>
-      </Link>
     </div>
   );
 }

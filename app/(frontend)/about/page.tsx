@@ -9,6 +9,12 @@ import CallToAction from "../_components/CallToAction";
 import ClientsSlider from "../_components/Clients";
 import { TestimonialSection2 } from "@/components/ui/infinite-moving-cards";
 
+export const metadata = {
+  title: "About Us | Linking Insurance Brokers",
+  description:
+    "Learn about Linking Insurance Brokers, our commitment to providing expert insurance solutions and personalized client support.",
+};
+
 const AboutPage = () => {
   return (
     <div className="flex min-h-screen flex-col justify-between overflow-hidden md:my-10 my-0 md:mx-36 mx-0 z-[40]">

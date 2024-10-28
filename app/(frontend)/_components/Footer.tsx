@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
+import NewsletterForm from "./NewsletterForm";
 
 const Footer: React.FC = () => {
   return (
@@ -72,11 +73,13 @@ const Footer: React.FC = () => {
           <p className="italic">
             Enter your email address to subscribe to our newsletters!
           </p>
-          <div className="md:flex md:flex-row flex flex-col w-full md:w-auto  items-center gap-1 z-[40]">
-            <Input type="email" placeholder="Email" />
+          {/* <div className="md:flex md:flex-row flex flex-col w-full md:w-auto  items-center gap-1 z-[40]"> */}
+          {/* <Input type="email" placeholder="Email" />
             <Button className="bg-orange-500 w-full md:w-auto hover:bg-white hover:text-primary hover:outline hover:outline-orange-500">
               Subscribe
-            </Button>
+            </Button> */}
+          <div>
+            <NewsletterForm />
           </div>
         </div>
       </div>

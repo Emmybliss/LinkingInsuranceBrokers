@@ -5,8 +5,9 @@ import { ThemeProvider } from "@/components/theme-provider";
 import Header from "./(frontend)/_components/Header";
 import Footer from "./(frontend)/_components/Footer";
 import StarsCanvas from "./_components/StarBackground";
-
 import ProgressBarProviders from "./_components/ProgressBarProvider";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 // Use Poppins from Google Fonts
 const poppins = Poppins({
@@ -17,7 +18,8 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: "Linking Insurance Brokers",
-  description: "The Insurance Broker that offers you peace of mind",
+  description:
+    "Providing peace of mind with tailored insurance solutions for individuals and businesses.",
 };
 
 export default function RootLayout({
@@ -38,7 +40,7 @@ export default function RootLayout({
             disableTransitionOnChange
           >
             <StarsCanvas />
-
+            <ToastContainer />
             <Header />
             {children}
             <Footer />
