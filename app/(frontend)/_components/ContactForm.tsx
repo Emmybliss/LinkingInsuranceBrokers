@@ -20,7 +20,7 @@ import { LoaderIcon } from "lucide-react";
 
 import { productsData, periodData } from "@/lib/constants"; // Ensure periodData is imported
 interface ContactFormProps {
-  setOpen: (open: boolean) => void;
+  setOpen?: (open: boolean) => void;
 }
 
 const ContactForm: React.FC<ContactFormProps> = ({ setOpen }) => {
@@ -28,6 +28,11 @@ const ContactForm: React.FC<ContactFormProps> = ({ setOpen }) => {
   const [success, setSuccess] = useState<string | undefined>("");
   const [isPending, startTransition] = useTransition();
 
+  const handleClose = () => {
+    if (setOpen) {
+      setOpen(false);
+    }
+  };
   const form = useForm<z.infer<typeof ContactFormSchema>>({
     resolver: zodResolver(ContactFormSchema),
     defaultValues: {
@@ -58,7 +63,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ setOpen }) => {
           // Reset form fields on success
           form.reset();
           // Close modal
-          setOpen(false);
+          handleClose();
         } else {
           toast("Submission Failed!", {
             position: "top-right",
