@@ -15,7 +15,7 @@ const ProductPage = () => {
   return (
     <div className="flex min-h-screen  flex-col justify-between overflow-hidden z-[40] md:mx-0 md:my-10">
       <Banner page_title="OUR PRODUCTS" src="/images/banner.jpg" />
-      <div className="mx-36">
+      <div className="md:mx-36 z-[40]">
         <ProductList products={data} />
       </div>
     </div>

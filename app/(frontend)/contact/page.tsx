@@ -20,9 +20,9 @@ export const metadata = {
 
 const ContactPage: React.FC = () => {
   return (
-    <div className="flex min-h-screen flex-col justify-between overflow-hidden z-[40] md:mx-36 mx-0 my-0 md:my-10">
+    <div className="flex min-h-screen flex-col justify-between overflow-hidden z-[40] md:mx-0 mx-0 my-0 md:my-10">
       <Banner page_title="CONTACT US" src="/images/contact1.jpg" />
-      <div className="gap-5 md:grid md:grid-cols-2 grid grid-cols-1 mt-5 px-3">
+      <div className="gap-5 md:grid md:grid-cols-2 z-[40] grid grid-cols-1 md:mx-36 mt-5 px-3">
         <div className="flex flex-col">
           {/* <h2 className="mb-4 text-2xl font-semibold">Send us a Message</h2>
           <div className="w-full z-[40]"> */}

@@ -42,27 +42,29 @@ const ServiceDetails = async ({ params }: { params: { slug: string } }) => {
   return (
     <div className="flex min-h-screen flex-col justify-between overflow-hidden z-[40] md:mx-0 md:my-10">
       <Banner page_title={service.title} src="/images/banner.jpg" />
-      <div className="flex flex-col mt-5 md:mt-10 mb-5 gap-5 mx-4 md:mx-36">
-        <div className="h-[400px] w-full">
-          <Image
-            src={service.image}
-            alt={service.title}
-            width={500}
-            height={400}
-            className="rounded-lg w-[500px] h-[400px] object-cover"
-          />
+      <div className="md:mx-36 z-[40]">
+        <div className="flex flex-col mt-5 md:mt-10 mb-5 gap-5 mx-4">
+          <div className="h-[400px] w-full">
+            <Image
+              src={service.image}
+              alt={service.title}
+              width={500}
+              height={400}
+              className="rounded-lg w-[500px] h-[400px] object-cover"
+            />
+          </div>
+          <div>
+            <h1 className="text-xl md:text-2xl font-semibold md:font-bold mb-4">
+              {service.title}
+            </h1>
+            <p className="text-lg mt-3 mb-5 text-justify">
+              {service.description}
+            </p>
+            <CallToAction />
+          </div>
         </div>
-        <div>
-          <h1 className="text-xl md:text-2xl font-semibold md:font-bold mb-4">
-            {service.title}
-          </h1>
-          <p className="text-lg mt-3 mb-5 text-justify">
-            {service.description}
-          </p>
-          <CallToAction />
-        </div>
+        <ClientsSlider />
       </div>
-      <ClientsSlider />
     </div>
   );
 };

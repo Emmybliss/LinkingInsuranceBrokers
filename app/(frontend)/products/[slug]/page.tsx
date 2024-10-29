@@ -39,27 +39,29 @@ const ProductDetails = async ({ params }: { params: { slug: string } }) => {
   // Fetch the product using the ID from params
   const product = await getProductById(params.slug);
   return (
-    <div className="flex min-h-screen flex-col justify-between overflow-hidden z-[40] md:mx-36 md:my-10">
+    <div className="flex min-h-screen flex-col justify-between overflow-hidden z-[40] md:mx-0 md:my-10">
       <Banner page_title={product.title} src="/images/banner.jpg" />
-      <div className="md:flex flex md:flex-row flex-col mt-5 md:mt-10 mb-5 gap-5 mx-4 md:mx-0">
-        <div className="h-full">
-          <Image
-            src={product.image}
-            alt={product.title}
-            width={600}
-            height={800}
-            className="rounded-lg md:h-[800px] md:w-full object-fill"
-          />
+      <div className="md:mx-36 z-[40]">
+        <div className="md:flex flex md:flex-row flex-col mt-5 md:mt-10 mb-5 gap-5 mx-4 md:mx-0">
+          <div className="h-full">
+            <Image
+              src={product.image}
+              alt={product.title}
+              width={600}
+              height={800}
+              className="rounded-lg md:h-[800px] md:w-full object-cover"
+            />
+          </div>
+          <div>
+            <h1 className="text-xl md:text-2xl font-semibold md:font-bold mb-4">
+              {product.title}
+            </h1>
+            <p className="text-lg mt-3 mb-5 text-justify">{product.desc}</p>
+            <CallToAction />
+          </div>
         </div>
-        <div>
-          <h1 className="text-xl md:text-2xl font-semibold md:font-bold mb-4">
-            {product.title}
-          </h1>
-          <p className="text-lg mt-3 mb-5 text-justify">{product.desc}</p>
-          <CallToAction />
-        </div>
+        <ClientsSlider />
       </div>
-      <ClientsSlider />
     </div>
   );
 };

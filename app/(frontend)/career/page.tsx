@@ -1,6 +1,6 @@
 import React from "react";
 import Banner from "../_components/Banner";
-import ProductList from "../_components/ProductList";
+
 import Link from "next/link";
 import Image from "next/image";
 
@@ -14,10 +14,7 @@ export const metadata = {
 const CareerPage = () => {
   return (
     <div className="flex min-h-screen flex-col justify-between overflow-hidden z-40 md:mx-0 md:my-10">
-      <Banner
-        page_title="Career Opportunities with Linking Insurance Brokers"
-        src="/images/banner.jpg"
-      />
+      <Banner page_title="CAREER OPPORTUNTIES" src="/images/banner.jpg" />
 
       <div className="md:mx-36 md:my-10 z-[40]">
         <div className="md:grid md:grid-cols-12 md:gap-5 grid grid-cols-1">

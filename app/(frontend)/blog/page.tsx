@@ -17,18 +17,19 @@ export const metadata = {
 const BlogPage: React.FC = () => {
   const data = postData;
   return (
-    <div className="md:mx-36 mx-0  md:my-10 my-0 flex min-h-screen flex-col justify-between overflow-hidden z-[40]">
+    <div className="md:mx-0 mx-0  md:my-10 my-0 flex min-h-screen flex-col justify-between overflow-hidden z-[40]">
       <Banner page_title="BLOG POSTS" src="/images/blog.jpg" />
+      <div className="md:mx-36 z-[40]">
+        <BlogPosts posts={data} />
+        <CallToAction
+          title="Get Expert Insurance Advice Today"
+          desc="Secure the best insurance plan tailored to your needs with our experienced brokers. Whether it's for your business, health, or property, we're here to guide you every step of the way!"
+          button="Get Free Quote!"
+        />
 
-      <BlogPosts posts={data} />
-      <CallToAction
-        title="Get Expert Insurance Advice Today"
-        desc="Secure the best insurance plan tailored to your needs with our experienced brokers. Whether it's for your business, health, or property, we're here to guide you every step of the way!"
-        button="Get Free Quote!"
-      />
-
-      <CallToAction2 />
-      <ClientsSlider />
+        <CallToAction2 />
+        <ClientsSlider />
+      </div>
     </div>
   );
 };
